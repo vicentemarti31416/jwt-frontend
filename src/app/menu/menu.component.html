@@ -1,0 +1,22 @@
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">CRUD MongoDB</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/"><i class="fa-solid fa-house-chimney-window"></i> Home</a>
+        </li>
+        
+      </ul>
+      <form class="d-flex" role="search">
+        <button *ngIf="isLogged" class="btn btn-outline-danger" type="submit" (click)="logout()"><i class="fa-solid fa-arrow-right-from-bracket"></i> Log Out</button>
+        <button *ngIf="!isLogged" class="btn btn-outline-success" type="submit" (click)="login()"><i class="fa-solid fa-arrow-right-to-bracket"></i> Log In</button>
+      </form>
+    </div>
+  </div>
+</nav>
